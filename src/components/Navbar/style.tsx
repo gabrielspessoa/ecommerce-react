@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Menu } from '@headlessui/react';
+import timesCircle from '../../assets/images/times-circle.svg';
 
 // nav container
 export const NavContainer = styled.div`
@@ -17,7 +19,7 @@ export const NavContainer = styled.div`
 
   a {
     text-decoration: none;
-    color: #000;
+    /* color: #000; */
   }
 `;
 
@@ -74,26 +76,68 @@ export const NavItem = styled.a`
   gap: 12px;
   cursor: pointer;
   transition: background-color 0.15s ease-in-out;
+  color: #000;
 
   &:hover {
     background-color: #e1e6ed;
   }
 `;
 
-export const StyledNavDropdown = styled.div`
-  padding: 6px 18px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  transition: color 0.15s ease-in-out;
-  position: relative;
+// export const StyledMenuItems = styled(Menu.Items)`
+//   display: flex;
+//   flex-direction: column;
+//   /* gap: 8px; */
+//   background: #fff;
+//   width: 200px;
+//   padding: 8px;
+//   border-radius: 4px;
+//   box-shadow: 0px 1px 8px 0px #0000003d;
+//   position: absolute;
+//   left: 0;
+//   transform-origin: top left;
+// `;
 
-  &:hover {
-    color: #0048b4;
-  }
-`;
+// export const StyledMenu = styled(Menu)`
+//   position: relative;
+
+//   /* ${StyledMenuItems} {
+//     position: absolute;
+//     left: 100%;
+//     top: 50%;
+//     transform: translateY(-50%);
+//   } */
+// `;
+
+// export const StyledMenuButton = styled(Menu.Button)`
+//   border: 0;
+//   background: none;
+//   padding: 2px 0;
+//   /* padding: 6px 18px; */
+//   border-radius: 4px;
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+//   cursor: pointer;
+//   transition: color 0.15s ease-in-out;
+//   position: relative;
+
+//   &:hover {
+//     color: #0048b4;
+//   }
+
+//   &:focus-visible {
+//     outline: solid 2px #000;
+//   }
+// `;
+
+// export const StyledAnchor = styled.a`
+//   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+//   background: ${(props: { active?: boolean }) =>
+//     props.active ? '#242424' : null};
+//   color: ${(props: { active: boolean }) => (props.active ? '#fff' : '#000')};
+//   padding: 8px 8px;
+//   border-radius: 4px;
+// `;
 
 export const NavSearch = styled.input`
   padding: 8px 18px;
@@ -110,4 +154,31 @@ export const NavSearch = styled.input`
     background-color: transparent;
     width: 300px;
   }
+  &::-webkit-search-cancel-button {
+    appearance: none;
+    position: absolute;
+    right: 18px;
+    height: 15px;
+    width: 15px;
+    background: url(${timesCircle}) no-repeat 50% 50%;
+  }
 `;
+
+// export const StyledSubMenuButton = styled(Menu.Button)`
+//   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+//   border: 0;
+//   background: transparent;
+//   width: 100%;
+//   color: #000;
+//   padding: 8px 8px;
+//   border-radius: 4px;
+//   text-align: start;
+//   cursor: pointer;
+//   display: flex;
+//   justify-content: space-between;
+
+//   &:hover {
+//     background: #242424;
+//     color: #fff;
+//   }
+// `;

@@ -1,36 +1,21 @@
-import { CaretDown, ShoppingCart, User } from 'phosphor-react';
-import { useState } from 'react';
+import { CaretDown, CaretRight, ShoppingCart, User } from 'phosphor-react';
 import {
   NavBrand,
   NavContainer,
-  StyledNavDropdown,
   NavItem,
   NavItemContainer,
   NavItemGroup,
   NavMain,
   NavMenu,
   NavSearch,
+  // StyledAnchor,
+  // StyledMenu,
+  // StyledMenuButton,
+  // StyledMenuItems,
+  // StyledSubMenuButton,
 } from './style';
-
-function NavDropdown(props: { children: any }) {
-  const [isOpen, setIsOpen] = useState(false);
-  function handleMouseEnter() {
-    setIsOpen(true);
-  }
-
-  function handleMouseLeave() {
-    setIsOpen(false);
-  }
-
-  return (
-    <StyledNavDropdown
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {props.children}
-    </StyledNavDropdown>
-  );
-}
+import { Menu } from '@headlessui/react';
+import { Dropdown, DropdownMenu } from '../Dropdown';
 
 export function Navbar() {
   return (
@@ -57,12 +42,54 @@ export function Navbar() {
         <NavMenu>
           <NavItemContainer>
             <NavItemGroup>
-              <NavDropdown>
-                Teste <CaretDown size={16} />
-              </NavDropdown>
-              <NavDropdown>
-                Teste2 <CaretDown size={16} />
-              </NavDropdown>
+              <Dropdown text='Menu'>
+                <DropdownMenu>Teste 1</DropdownMenu>
+                <DropdownMenu href='https://facebook.com'>Teste 2</DropdownMenu>
+              </Dropdown>
+              {/* <StyledMenu forwardedAs='div'>
+                <StyledMenuButton>
+                  Teste <CaretDown size={16} />
+                </StyledMenuButton>
+                <StyledMenuItems>
+                  <Menu.Item>
+                    {({ active }: any) => (
+                      <StyledAnchor active={active} href='teste'>
+                        Teste
+                      </StyledAnchor>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }: any) => (
+                      <StyledAnchor active={active} href='teste'>
+                        Teste
+                      </StyledAnchor>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }: any) => (
+                      <StyledAnchor active={active} href='teste'>
+                        Teste
+                      </StyledAnchor>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    <StyledMenu forwardedAs='div'>
+                      <StyledSubMenuButton>
+                        Submenu <CaretRight size={16} />
+                      </StyledSubMenuButton>
+                      <StyledMenuItems>
+                        <Menu.Item>
+                          {({ active }: any) => (
+                            <StyledAnchor active={active} href='teste'>
+                              Teste
+                            </StyledAnchor>
+                          )}
+                        </Menu.Item>
+                      </StyledMenuItems>
+                    </StyledMenu>
+                  </Menu.Item>
+                </StyledMenuItems>
+              </StyledMenu> */}
             </NavItemGroup>
           </NavItemContainer>
         </NavMenu>
