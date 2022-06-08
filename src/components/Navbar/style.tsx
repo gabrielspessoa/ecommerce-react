@@ -160,7 +160,7 @@ export const NavSearch = styled.input`
     right: 18px;
     height: 15px;
     width: 15px;
-    background: url(${timesCircle}) no-repeat 50% 50%;
+    background: url('/images/times-circle.svg') no-repeat 50% 50%;
   }
 `;
 
