@@ -1,7 +1,8 @@
 import { Navbar } from './../components/Navbar';
-import BannerUrl from './../assets/images/banner.jpg';
 import { useEffect, useState } from 'react';
-import { Catalog } from '../components/Catalog';
+import { Outlet } from 'react-router-dom';
+import Footer from '../components/Footer';
+
 export default function Home() {
   const [products, setProducts] = useState([] as any);
 
@@ -18,25 +19,8 @@ export default function Home() {
   return (
     <>
       <Navbar></Navbar>
-      <Catalog></Catalog>
-      {/* {products.map((prod: any) => {
-        return (
-          <div
-            style={{
-              border: 'solid 1px',
-              padding: 10,
-              display: 'flex',
-              flexDirection: 'column',
-              width: '100%',
-            }}
-          >
-            <span>{prod.id}</span>
-            <span>{prod.name}</span>
-            <span>{prod.quantity}</span>
-            <img src={`/images/products/product_${prod.id}.jpeg`}></img>
-          </div>
-        );
-      })} */}
+      <Outlet></Outlet>
+      <Footer></Footer>
     </>
   );
 }

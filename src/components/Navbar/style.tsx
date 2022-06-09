@@ -13,7 +13,7 @@ export const NavContainer = styled.div`
   font-family: 'Poppins';
   /* height: 64px; */
   /* align-items: center; */
-  padding: 0 54px;
+  padding: 0 72px;
   /* gap: 42px; */
   box-shadow: 0 0 10px 0px #00000021;
 
@@ -82,62 +82,6 @@ export const NavItem = styled.a`
     background-color: #e1e6ed;
   }
 `;
-
-// export const StyledMenuItems = styled(Menu.Items)`
-//   display: flex;
-//   flex-direction: column;
-//   /* gap: 8px; */
-//   background: #fff;
-//   width: 200px;
-//   padding: 8px;
-//   border-radius: 4px;
-//   box-shadow: 0px 1px 8px 0px #0000003d;
-//   position: absolute;
-//   left: 0;
-//   transform-origin: top left;
-// `;
-
-// export const StyledMenu = styled(Menu)`
-//   position: relative;
-
-//   /* ${StyledMenuItems} {
-//     position: absolute;
-//     left: 100%;
-//     top: 50%;
-//     transform: translateY(-50%);
-//   } */
-// `;
-
-// export const StyledMenuButton = styled(Menu.Button)`
-//   border: 0;
-//   background: none;
-//   padding: 2px 0;
-//   /* padding: 6px 18px; */
-//   border-radius: 4px;
-//   display: flex;
-//   align-items: center;
-//   gap: 12px;
-//   cursor: pointer;
-//   transition: color 0.15s ease-in-out;
-//   position: relative;
-
-//   &:hover {
-//     color: #0048b4;
-//   }
-
-//   &:focus-visible {
-//     outline: solid 2px #000;
-//   }
-// `;
-
-// export const StyledAnchor = styled.a`
-//   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
-//   background: ${(props: { active?: boolean }) =>
-//     props.active ? '#242424' : null};
-//   color: ${(props: { active: boolean }) => (props.active ? '#fff' : '#000')};
-//   padding: 8px 8px;
-//   border-radius: 4px;
-// `;
 
 export const NavSearch = styled.input`
   padding: 8px 18px;

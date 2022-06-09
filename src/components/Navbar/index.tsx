@@ -33,7 +33,7 @@ export function Navbar() {
               <NavItem href='/'>
                 <ShoppingCart size={28} />
               </NavItem>
-              <NavItem href='/'>
+              <NavItem href='/login'>
                 <User size={28} /> Gabriel Pessoa
               </NavItem>
             </NavItemGroup>
